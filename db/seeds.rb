@@ -6,48 +6,76 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-posts = Post.create([
+posts = Post.create!([
   {
     description: "Coding is taking all away my black hair",
-    author: "tester1"
+    user_id: 1
   },
   {
     description: "Give me a break",
-    author: "tester2"
+    user_id: 2
   },
   {
     description: "I hate homework",
-    author: "tester3"
+    user_id: 3
   },
   {
     description: "Pay attention to me",
-    author: "tester4"
+    user_id: 4
   },
   {
     description: "Welcome to chilli's",
-    author: "tester5"
+    user_id: 5
   }
 ])
 
-comments = Comment.create([
+comments = Comment.create!([
   {
     description: "Thats a fact",
-    author: "commenter1",
+    user_id: 1,
     post_id: posts.first.id
   },
   {
     description: "NEVAAAAAA!!!!!!",
-    author: "commenter2",
+    user_id: 2,
     post_id: posts.second.id
   },
   {
     description: "No one likes hw ;-;",
-    author: "commenter3",
+    user_id: 3,
     post_id: posts.third.id
   },
   {
     description: "LMAOOOOOO what a vine",
-    author: "commenter4",
+    user_id: 4,
     post_id: posts.last.id
   },
+])
+
+users = User.create!([
+  {
+    email: "test1@test.com",
+    username: "tester6",
+    password: "password"
+  },
+  {
+    email: "test2@test.com",
+    username: "tester2",
+    password: "password"
+  },
+  {
+    email: "test3@test.com",
+    username: "tester3",
+    password: "password"
+  },
+  {
+    email: "test4@test.com",
+    username: "tester4",
+    password: "password"
+  },
+  {
+    email: "test5@test.com",
+    username: "tester5",
+    password: "password"
+  }
 ])

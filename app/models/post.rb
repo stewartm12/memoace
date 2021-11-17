@@ -1,4 +1,4 @@
 class Post < ApplicationRecord
-  validates :description, :author, presence: true
+  validates :description, :user_id, presence: true
   has_many :comments
 end
