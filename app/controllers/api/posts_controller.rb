@@ -20,16 +20,6 @@ module Api
       end
     end
 
-    def update
-      post = Post.find_by(id: params[:id])
-
-      if post.update(post_params)
-        render json: post
-      else
-        render json: {error: post.errors.messages}, status: 422
-      end
-    end
-
     def destroy
       post = Post.find_by(id: params[:id])
 
