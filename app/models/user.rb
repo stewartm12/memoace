@@ -24,4 +24,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :username, :email, :encrypted_password, presence: true
+
+  has_many :posts
+  has_many :comments
+  has_many :likes
+  has_many :liked_posts, through: :likes, source: :liked_type, source_type: "Post"
+  has_many :liked_comments, through: :likes, source: :liked_type, source_type: "Comment"
 end
