@@ -1,0 +1,40 @@
+.splash-page {
+  height: 100vh;
+  background: url("background-image.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #f6df68;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.splash-page-logo {
+  width: 10%;
+  object-fit: cover;
+}
+
+.navbar-sessions {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.navbar-sessions > a {
+  font-size: large;
+  color: rgb(0, 0, 96);
+  font-weight: bolder;
+}
+
+.navbar-sessions > a:hover {
+  color: rgb(118, 118, 244);
+}
+
+.splash-page-content {
+  text-align: center;
+  font-size: x-large;
+  color: rgb(0, 0, 96);
+}

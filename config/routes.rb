@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   root to: 'static_pages#root'
 
   namespace :api do
-    resources :posts
+    resources :posts, except: [:update, :new]
     resources :comments, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
   end
 
   get '*path', to: 'pages#index', via: :all
