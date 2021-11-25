@@ -8,10 +8,11 @@ import PropTypes from 'prop-types'
 import App from '../components/App'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Root from "../components/root";
+import configureStore from '../store/store'
 
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById("root");
-  ReactDOM.render(<Root/>, root);
-  // ReactDOM.render(<div className="worrrrrrrr">Hellow world</div>, root)
+  let store = configureStore()
+  ReactDOM.render(<Root store={store}/>, root);
 })
