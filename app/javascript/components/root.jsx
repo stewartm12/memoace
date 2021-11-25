@@ -1,12 +1,14 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 const Root = ({ store }) => (
-    <HashRouter>
+  <Provider store={store}>
+    <BrowserRouter>
       <App />
-    </HashRouter>
+    </BrowserRouter>
+  </Provider>
 );
 
 export default Root;
